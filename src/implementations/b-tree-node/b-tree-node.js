@@ -1,10 +1,10 @@
-export class BTreeNode {
-  constructor(isLeaf) {
-    this.values = [];
+export default class BTreeNode {
+  constructor(isLeaf, values, children, tree, parent) {
+    this.values = values;
     this.leaf = isLeaf;
-    this.children = [];
-    this.tree = null;
-    this.parent = null;
+    this.children = children;
+    this.tree = tree;
+    this.parent = parent;
   }
 
   get n() {
