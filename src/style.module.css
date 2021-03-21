@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  background-color: #1e1f26;
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+.header {
+  color: #fffff9;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.typo {
+  margin: 0.5rem 0;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.node {
+  display: inline-flex;
+  border: 2px solid #7356bf;
+  border-radius: 6px;
+}
+
+.layer {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.layer1 {
+  margin-top: 0;
+}
+
+.treeVisualizer {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nodelayer2 {
+  margin: 0 12rem;
+}
+
+.nodelayer3 {
+  margin: 0 2rem;
+}
+
+.nodelayer4 {
+  margin: 0 0.5rem;
+}
+
+.bar {
+  height: 43px;
+  width: 2px;
+  background-color: #7356bf;
+}
+
+.arraySimulator {
+  color: white;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 400px;
+}
+
+.arrayPage {
+}
