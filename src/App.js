@@ -1,10 +1,40 @@
 import React from 'react';
 import style from './style.module.css';
 import BTree from './implementations';
-import { NodeValue } from './components/b-tree-value';
+import { NodeValue, ArraySimulator } from './components';
 
 function App() {
   BTree.searchValue(BTree.root, 72);
+  const students = [
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'An Pham' },
+  ];
+
+  console.log(students.length);
+
   return (
     <div className={style.app}>
       <div className={style.header}>
@@ -103,13 +133,7 @@ function App() {
           </div>
         </div>
         <div className={style.arrayPage}>
-          <div className={style.arraySimulator}>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-          </div>
+          <ArraySimulator students={students} />
         </div>
       </div>
     </div>

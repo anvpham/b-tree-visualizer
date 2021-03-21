@@ -1,0 +1,22 @@
+.bar {
+  height: 25px;
+  width: 2px;
+  background-color: #7356bf;
+}
+
+.arrayRow {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  border-bottom: 2px solid #7356bf;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstCell {
+  margin-left: 2rem;
+}
+
+.studentName {
+  width: 200px;
+}
