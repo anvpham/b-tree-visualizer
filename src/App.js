@@ -6,31 +6,31 @@ import { NodeValue, ArraySimulator } from './components';
 function App() {
   BTree.searchValue(BTree.root, 72);
   const students = [
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
-    { index: 0, id: 55, name: 'An Pham' },
+    { index: 0, id: 55, name: 'James' },
+    { index: 1, id: 46, name: 'John' },
+    { index: 2, id: 51, name: 'Robert' },
+    { index: 3, id: 63, name: 'Jason' },
+    { index: 4, id: 67, name: 'Michael' },
+    { index: 5, id: 41, name: 'William' },
+    { index: 6, id: 48, name: 'David' },
+    { index: 7, id: 53, name: 'Richard' },
+    { index: 8, id: 61, name: 'Joseph' },
+    { index: 9, id: 65, name: 'Thomas' },
+    { index: 10, id: 69, name: 'Charles' },
+    { index: 11, id: 40, name: 'Christopher' },
+    { index: 12, id: 45, name: 'Daniel' },
+    { index: 13, id: 47, name: 'Matthew' },
+    { index: 14, id: 49, name: 'Anthony' },
+    { index: 15, id: 50, name: 'Donald' },
+    { index: 16, id: 52, name: 'Mark' },
+    { index: 17, id: 54, name: 'Paul' },
+    { index: 18, id: 60, name: 'Steven' },
+    { index: 19, id: 62, name: 'Andrew' },
+    { index: 20, id: 64, name: 'Joshua' },
+    { index: 21, id: 66, name: 'Kevin' },
+    { index: 22, id: 68, name: 'Brian' },
+    { index: 23, id: 70, name: 'Edward' },
+    { index: 24, id: 71, name: 'George' },
   ];
 
   console.log(students.length);
@@ -39,7 +39,7 @@ function App() {
     <div className={style.app}>
       <div className={style.header}>
         <div className={style.typo}>
-          Course: Cấu trúc dữ liệu và giải thuật nâng cao
+          Course: Advanced Data Structures and Algorithms
         </div>
         <div className={style.typo}>
           Topic: B-Tree

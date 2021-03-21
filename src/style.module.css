@@ -48,10 +48,10 @@ body {
 }
 
 .treeVisualizer {
-  width: 100%;
-  flex: 1;
+  flex: 3;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nodelayer2 {
@@ -73,4 +73,8 @@ body {
 }
 
 .arrayPage {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -11,12 +11,15 @@
   border-bottom: 2px solid #7356bf;
   justify-content: space-between;
   align-items: center;
+  width: 300px;
 }
 
 .firstCell {
   margin-left: 2rem;
+  width: 25px;
+  font-weight: 400;
 }
 
 .studentName {
-  width: 200px;
+  width: 100px;
 }
