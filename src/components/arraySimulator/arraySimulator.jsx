@@ -8,7 +8,7 @@ const ArraySimulator = (props) => (
          Student Array [  ]
       </div>
       {props.students.map(student => (
-         <ArrayRow index={student.index} studentId={student.id} studentName={student.name} />
+         <ArrayRow key={student.index} index={student.index} studentId={student.id} studentName={student.name} />
       ))}
    </div>
 )

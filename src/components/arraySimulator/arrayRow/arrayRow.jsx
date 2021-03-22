@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './style.module.css';
+import { appContext } from '../../../context';
 
-const ArrayRow = (props) => (
-   <div className={style.arrayRow}>
-      <div className={style.firstCell}>{props.index}</div>
-      <div className={style.bar}></div>
-      <div>{props.studentId}</div>
-      <div className={style.bar}></div>
-      <div className={style.studentName}>{props.studentName}</div>
-   </div>
-)
+const ArrayRow = (props) => {
+   const context = useContext(appContext);
+   const isHighlighted = context.currentBTreeNode == props.studentId ? style.highlighted : ''
+   const isMatch = context.matchingBTreeNode == props.studentId ? style.match : '';
+
+   return (
+      <div className={`${style.arrayRow} ${isHighlighted || isMatch}`}>
+         <div className={`${style.firstCell} ${isHighlighted || isMatch}`}>{props.index}</div>
+         <div className={style.bar}></div>
+         <div className={isHighlighted || isMatch}>{props.studentId}</div>
+         <div className={style.bar}></div>
+         <div className={`${style.studentName} ${isHighlighted || isMatch}`}>{props.studentName}</div>
+      </div>
+   )
+} 
 
 export default ArrayRow;

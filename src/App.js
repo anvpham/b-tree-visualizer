@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './style.module.css';
 import BTree from './implementations';
+import { appContext, initialContext } from './context';
 import { NodeValue, ArraySimulator } from './components';
 
+let setAppStateGlobal;
+
 function App() {
-  BTree.searchValue(BTree.root, 72);
+  const [appState, setAppState] = useState(initialContext);
+  setAppStateGlobal = setAppState;
+
+  const findByTree = () => {
+    BTree.searchValue(BTree.root, 71);
+  };
+
   const students = [
     { index: 0, id: 55, name: 'James' },
     { index: 1, id: 46, name: 'John' },
@@ -33,110 +42,116 @@ function App() {
     { index: 24, id: 71, name: 'George' },
   ];
 
-  console.log(students.length);
-
   return (
-    <div className={style.app}>
-      <div className={style.body}>
-        <div className={style.leftPage}>
-          <div className={style.title}>
-            <div className={style.typo}>
-              Course: Advanced Data Structures and Algorithms
+    <appContext.Provider value={appState}>
+      <div className={style.app}>
+        <div className={style.body}>
+          <div className={style.leftPage}>
+            <div className={style.title}>
               <div className={style.typo}>
-                Topic: B-Tree &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhóm: 3
-              </div>
-            </div>
-          </div>
-          <div className={style.treeVisualizer}>
-            <div className={style.treeContainer}>
-              <div className={`${style.layer} ${style.layer1}`}>
-                <div className={style.node}>
-                  <NodeValue>55</NodeValue>
-                </div>
-              </div>
-              <div className={style.layer}>
-                <div className={`${style.node} ${style.nodelayer2}`}>
-                  <NodeValue>46</NodeValue>
-                  <div className={style.bar}></div>
-                  <NodeValue>51</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer2}`}>
-                  <NodeValue>63</NodeValue>
-                  <div className={style.bar}></div>
-                  <NodeValue>67</NodeValue>
-                </div>
-              </div>
-              <div className={style.layer}>
-                <div className={`${style.node} ${style.nodelayer3}`}>
-                  <NodeValue>41</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer3}`}>
-                  <NodeValue>48</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer3}`}>
-                  <NodeValue>53</NodeValue>
-                  <div></div>
-                </div>
-                <div className={`${style.node} ${style.nodelayer3}`}>
-                  <NodeValue>61</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer3}`}>
-                  <NodeValue>65</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer3}`}>
-                  <NodeValue>69</NodeValue>
-                </div>
-              </div>
-              <div className={style.layer}>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>40</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>45</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>47</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>49</NodeValue>
-                  <div className={style.bar}></div>
-                  <NodeValue>50</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>52</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>54</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>60</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>62</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>64</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>66</NodeValue>
-                  <div className={style.bar}></div>
-                  <NodeValue>68</NodeValue>
-                </div>
-                <div className={`${style.node} ${style.nodelayer4}`}>
-                  <NodeValue>70</NodeValue>
-                  <div className={style.bar}></div>
-                  <NodeValue>71</NodeValue>
+                Course: Advanced Data Structures and Algorithms
+                <div className={style.typo}>
+                  Topic: B-Tree
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhóm:
+                  3
                 </div>
               </div>
             </div>
+            <div>
+              <button onClick={findByTree}>Find by B-Tree</button>
+            </div>
+            <div className={style.treeVisualizer}>
+              <div className={style.treeContainer}>
+                <div className={`${style.layer} ${style.layer1}`}>
+                  <div className={style.node}>
+                    <NodeValue>55</NodeValue>
+                  </div>
+                </div>
+                <div className={style.layer}>
+                  <div className={`${style.node} ${style.nodelayer2}`}>
+                    <NodeValue>46</NodeValue>
+                    <div className={style.bar}></div>
+                    <NodeValue>51</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer2}`}>
+                    <NodeValue>63</NodeValue>
+                    <div className={style.bar}></div>
+                    <NodeValue>67</NodeValue>
+                  </div>
+                </div>
+                <div className={style.layer}>
+                  <div className={`${style.node} ${style.nodelayer3}`}>
+                    <NodeValue>41</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer3}`}>
+                    <NodeValue>48</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer3}`}>
+                    <NodeValue>53</NodeValue>
+                    <div></div>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer3}`}>
+                    <NodeValue>61</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer3}`}>
+                    <NodeValue>65</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer3}`}>
+                    <NodeValue>69</NodeValue>
+                  </div>
+                </div>
+                <div className={style.layer}>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>40</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>45</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>47</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>49</NodeValue>
+                    <div className={style.bar}></div>
+                    <NodeValue>50</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>52</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>54</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>60</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>62</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>64</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>66</NodeValue>
+                    <div className={style.bar}></div>
+                    <NodeValue>68</NodeValue>
+                  </div>
+                  <div className={`${style.node} ${style.nodelayer4}`}>
+                    <NodeValue>70</NodeValue>
+                    <div className={style.bar}></div>
+                    <NodeValue>71</NodeValue>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className={style.arrayPage}>
-          <ArraySimulator students={students} />
+          <div className={style.arrayPage}>
+            <ArraySimulator students={students} />
+          </div>
         </div>
       </div>
-    </div>
+    </appContext.Provider>
   );
 }
 
+export { setAppStateGlobal };
 export default App;

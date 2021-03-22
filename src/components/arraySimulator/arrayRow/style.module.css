@@ -23,3 +23,11 @@
 .studentName {
   width: 100px;
 }
+
+.highlighted {
+  background-color: #7356bf;
+}
+
+.match {
+  background-color: #3aa76d;
+}
