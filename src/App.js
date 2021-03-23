@@ -28,7 +28,7 @@ function App() {
         matchingBTreeNode: -1,
         matchingArrayIndex: -1,
         isFinding: true,
-        steps: prevState.steps + 1,
+        operations: prevState.operations + 1,
       }));
 
       if (students[i].id == value) {
