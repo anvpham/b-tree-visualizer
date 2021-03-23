@@ -64,7 +64,7 @@ function App() {
       alert('Please enter a valid input between 40 and 72');
       setAppState((prevState) => ({
         ...prevState,
-        steps: 0,
+        operations: 0,
         currentBTreeNode: -1,
         currentArrayIndex: -1,
         matchingBTreeNode: -1,
@@ -75,7 +75,7 @@ function App() {
       if (checked) {
         setAppState((prevState) => ({
           ...prevState,
-          steps: 0,
+          operations: 0,
           currentBTreeNode: -1,
           currentArrayIndex: -1,
           matchingBTreeNode: -1,
@@ -86,7 +86,7 @@ function App() {
       } else {
         setAppState((prevState) => ({
           ...prevState,
-          steps: 0,
+          operations: 0,
           currentBTreeNode: -1,
           currentArrayIndex: -1,
           matchingBTreeNode: -1,
