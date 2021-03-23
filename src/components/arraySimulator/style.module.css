@@ -1,17 +1,17 @@
 .arraySimulator {
-  color: white;
-  border-top: 2px solid #7356bf;
-  border-right: 2px solid #7356bf;
-  border-left: 2px solid #7356bf;
+  color: black;
+  border-top: 2px solid #276ef1;
+  border-right: 2px solid #276ef1;
+  border-left: 2px solid #276ef1;
   border-radius: 3px;
   font-size: 1.2rem;
-  width: 304px;
+  width: 300px;
 }
 
 .titles {
   display: flex;
   font-size: 1.2rem;
-  border-bottom: 2px solid #7356bf;
+  border-bottom: 2px solid #276ef1;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -21,7 +21,7 @@
 .bar {
   height: 25px;
   width: 2px;
-  background-color: #7356bf;
+  background-color: #276ef1;
 }
 
 .studentName {

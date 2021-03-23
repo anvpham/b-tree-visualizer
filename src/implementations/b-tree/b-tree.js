@@ -1,8 +1,5 @@
 import { setAppStateGlobal } from '../../App';
-
-const sleep = (ms) => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
+import sleep from '../../utils/sleep';
 
 export default class BTree {
   constructor(order) {
@@ -16,41 +13,59 @@ export default class BTree {
     if (node.values[child] > value) {
       await sleep(800);
 
-      setAppStateGlobal({
-        findByBTree: true,
+      setAppStateGlobal((prevState) => ({
+        ...prevState,
         currentBTreeNode: node.values[child],
         currentArrayIndex: -1,
         matchingBTreeNode: -1,
         matchingArrayIndex: -1,
-      });
+        isFinding: true,
+        steps: prevState.steps + 1,
+      }));
     }
 
     while (child <= node.n && node.values[child] <= value) {
       await sleep(800);
 
-      setAppStateGlobal({
-        findByBTree: true,
+      setAppStateGlobal((prevState) => ({
+        ...prevState,
         currentBTreeNode: node.values[child],
         currentArrayIndex: -1,
         matchingBTreeNode: -1,
         matchingArrayIndex: -1,
-      });
+        isFinding: true,
+        steps: prevState.steps + 1,
+      }));
 
       if (node.values[child] == value) {
-        setAppStateGlobal({
-          findByBTree: true,
+        setAppStateGlobal((prevState) => ({
+          ...prevState,
           currentBTreeNode: -1,
           currentArrayIndex: -1,
           matchingBTreeNode: node.values[child],
           matchingArrayIndex: -1,
-        });
+          isFinding: false,
+        }));
         return true;
       }
 
       child++;
     }
 
-    if (node.leaf) return false;
+    if (node.leaf) {
+      setAppStateGlobal((prevState) => ({
+        ...prevState,
+        currentBTreeNode: -1,
+        currentArrayIndex: -1,
+        matchingBTreeNode: -1,
+        matchingArrayIndex: -1,
+        isFinding: false,
+      }));
+
+      alert(`${value} not founded`);
+
+      return false;
+    }
 
     return this.searchValue(node.children[child], value);
   }

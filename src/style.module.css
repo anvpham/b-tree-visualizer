@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-* {
-  background-color: #1e1f26;
+body {
+  background-color: #ffffff;
   font-family: Roboto;
   box-sizing: border-box;
 }
@@ -12,13 +12,23 @@ body {
 }
 
 .title {
-  color: #fffff9;
+  color: black;
   font-size: 1.5rem;
   font-weight: 300;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin-left: 1rem !important;
 }
 
 .typo {
@@ -34,7 +44,7 @@ body {
 
 .node {
   display: inline-flex;
-  border: 2px solid #7356bf;
+  border: 2px solid #276ef1;
   border-radius: 3px;
 }
 
@@ -46,6 +56,17 @@ body {
 
 .layer1 {
   margin-top: 0;
+}
+
+.switch {
+  margin-left: 2rem !important;
+}
+
+.steps {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 100px;
 }
 
 .treeVisualizer {
@@ -71,7 +92,7 @@ body {
 .bar {
   height: 43px;
   width: 2px;
-  background-color: #7356bf;
+  background-color: #276ef1;
 }
 
 .arrayPage {

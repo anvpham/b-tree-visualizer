@@ -4,8 +4,8 @@ import { appContext } from '../../../context';
 
 const ArrayRow = (props) => {
    const context = useContext(appContext);
-   const isHighlighted = context.currentBTreeNode == props.studentId ? style.highlighted : ''
-   const isMatch = context.matchingBTreeNode == props.studentId ? style.match : '';
+   const isHighlighted = context.currentBTreeNode == props.studentId || context.currentArrayIndex == props.index ? style.highlighted : ''
+   const isMatch = context.matchingBTreeNode == props.studentId || context.matchingArrayIndex == props.index ? style.match : '';
 
    return (
       <div className={`${style.arrayRow} ${isHighlighted || isMatch}`}>

@@ -1,14 +1,14 @@
 .bar {
   height: 25px;
   width: 2px;
-  background-color: #7356bf;
+  background-color: #276ef1;
 }
 
 .arrayRow {
   display: flex;
   font-size: 1rem;
   font-weight: 300;
-  border-bottom: 2px solid #7356bf;
+  border-bottom: 2px solid #276ef1;
   justify-content: space-between;
   align-items: center;
   width: 300px;
@@ -25,7 +25,7 @@
 }
 
 .highlighted {
-  background-color: #7356bf;
+  background-color: #276ef1;
 }
 
 .match {
