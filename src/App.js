@@ -176,7 +176,7 @@ function App() {
                 className={style.switch}
               />
               <div className={style.operations}>
-                Steps: {appState.operations}
+                Operations: {appState.operations}
               </div>
             </div>
             <div className={style.treeVisualizer}>
