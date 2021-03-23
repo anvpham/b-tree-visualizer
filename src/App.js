@@ -175,7 +175,9 @@ function App() {
                 label="Find by B-Tree"
                 className={style.switch}
               />
-              <div className={style.steps}>Steps: {appState.steps}</div>
+              <div className={style.operations}>
+                Steps: {appState.operations}
+              </div>
             </div>
             <div className={style.treeVisualizer}>
               <div className={style.treeContainer}>

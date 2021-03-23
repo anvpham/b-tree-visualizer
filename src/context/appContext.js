@@ -7,7 +7,7 @@ const initialContext = {
   matchingBTreeNode: -1,
   matchingArrayIndex: -1,
   isFinding: false,
-  steps: 0,
+  operations: 0,
 };
 
 const appContext = React.createContext(initialContext);
