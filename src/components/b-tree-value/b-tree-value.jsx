@@ -4,8 +4,9 @@ import { appContext } from '../../context';
 
 const Value = (props) => {
    const context = useContext(appContext);
+   
    return (
-      <div className={`${style.value} ${context.currentBTreeNode == props.children ? style.highlighted : ''} ${context.matchingBTreeNode == props.children ?  style.match : ''}`}>
+      <div id={props.id || ''} className={`${style.value} ${context.currentBTreeNode == props.children ? style.highlighted : ''} ${context.matchingBTreeNode == props.children ?  style.match : ''} ${props.className || ''}`}>
       {props.children}
    </div>
    )

@@ -5,7 +5,9 @@ import { ArrayRow } from './arrayRow';
 const ArraySimulator = (props) => (
    <div className={style.arraySimulator}>
       <div className={style.titles}>
-         Student Array [  ]
+         <div className={style.firstTitle}>Array Index</div>
+         <div className={style.secondTitle}>Student Id</div>
+         <div className={style.thirdTitle}>Student Name</div>
       </div>
       {props.students.map(student => (
          <ArrayRow key={student.index} index={student.index} studentId={student.id} studentName={student.name} />

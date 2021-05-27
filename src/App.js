@@ -129,6 +129,27 @@ function App() {
   return (
     <appContext.Provider value={appState}>
       <div className={style.app}>
+        <svg height="1080" width="1920" className={style.line}>
+          <line x1="515" y1="268" x2="685" y2="350" />
+          <line x1="465" y1="268" x2="295" y2="350" />
+          <line x1="193" y1="393" x2="180" y2="478" />
+          <line x1="245" y1="395" x2="290" y2="476" />
+          <line x1="245" y1="395" x2="290" y2="476" />
+          <line x1="296" y1="395" x2="430" y2="476" />
+          <line x1="735" y1="395" x2="666" y2="476" />
+          <line x1="786" y1="395" x2="800" y2="476" />
+          <line x1="168" y1="518" x2="61" y2="600" />
+          <line x1="220" y1="518" x2="155" y2="600" />
+          <line x1="288" y1="518" x2="228" y2="600" />
+          <line x1="338" y1="518" x2="280" y2="600" />
+          <line x1="405" y1="518" x2="390" y2="600" />
+          <line x1="456" y1="518" x2="470" y2="600" />
+          <line x1="524" y1="518" x2="515" y2="600" />
+          <line x1="575" y1="518" x2="600" y2="600" />
+          <line x1="642" y1="518" x2="665" y2="600" />
+          <line x1="693" y1="518" x2="735" y2="600" />
+          <line x1="760" y1="518" x2="850" y2="600" />
+        </svg>
         <div className={style.body}>
           <div className={style.leftPage}>
             <div className={style.title}>
@@ -143,7 +164,7 @@ function App() {
             </div>
             <div className={style.inputContainer}>
               <TextField
-                label="Enter a number to find"
+                label="Enter a student ID to find"
                 className={style.textField}
                 variant="outlined"
                 onChange={(event) => {

@@ -11,6 +11,12 @@ body {
   padding: 0.5rem 1rem;
 }
 
+.line {
+  stroke:black;
+  stroke-with: 2;
+  position: absolute;
+}
+
 .title {
   color: black;
   font-size: 1.5rem;
