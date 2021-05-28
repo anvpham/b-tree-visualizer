@@ -164,7 +164,7 @@ function App() {
             </div>
             <div className={style.inputContainer}>
               <TextField
-                label="Enter a student ID to find"
+                label="Enter a student ID to search"
                 className={style.textField}
                 variant="outlined"
                 onChange={(event) => {
@@ -180,7 +180,7 @@ function App() {
                 }}
                 disabled={appState.isFinding}
               >
-                Find
+                Search
               </Button>
               <FormControlLabel
                 control={
@@ -193,7 +193,7 @@ function App() {
                     color="primary"
                   />
                 }
-                label="Find by B-Tree"
+                label="Search by B-Tree"
                 className={style.switch}
               />
               <div className={style.operations}>
