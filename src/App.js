@@ -154,7 +154,12 @@ function App() {
           <div className={style.leftPage}>
             <div className={style.title}>
               <div className={style.typo}>
-                B-Tree visualizer
+                Course: Advanced Data Structures and Algorithms
+                <div className={style.typo}>
+                  Topic: B-Tree
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhóm:
+                  3
+                </div>
               </div>
             </div>
             <div className={style.inputContainer}>
