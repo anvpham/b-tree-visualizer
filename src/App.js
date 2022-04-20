@@ -154,12 +154,7 @@ function App() {
           <div className={style.leftPage}>
             <div className={style.title}>
               <div className={style.typo}>
-                Course: Advanced Data Structures and Algorithms
-                <div className={style.typo}>
-                  Topic: B-Tree
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhóm:
-                  3
-                </div>
+                B-Tree Search Operation Visualizer
               </div>
             </div>
             <div className={style.inputContainer}>
