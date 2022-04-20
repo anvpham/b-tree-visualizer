@@ -156,6 +156,7 @@ function App() {
               <div className={style.typo}>
                 B-Tree Search Operation Visualizer
               </div>
+              <div class="style_typo__eECBs">&nbsp;</div>
             </div>
             <div className={style.inputContainer}>
               <TextField
